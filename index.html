@@ -3,17 +3,96 @@
   <head>
     <meta charset="utf-8">
     <title>GAM</title>
+    <style media="screen">
+      body {
+        margin: 0;
+        text-align: center;
+        background-color: #AD8245;
+      }
+      canvas {
+        margin: 0;
+        display: inline-block;
+        background-color: rgba(0,0,0,0.3);
+        height: 100%;
+        width: 69%;
+        margin-top: 15vh;
+      }
+      body > div {
+        margin: 0;
+        width: 30%;
+        display: inline-block;
+        float: right;
+        vertical-align: middle;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #330909;
+        overflow-y: scroll;
+      }
+      li {
+        background-color: rgba(201,166,117, 0.4);
+        color: rgba(0,0,0,0.3);
+        margin: 0;
+        padding: 13px 10px;
+      }
+      .available {
+        cursor: pointer;
+        background-color: rgba(201,166,117, 1);
+        color: #fff;
+      }
+      .available:hover {
+        background-color: rgba(201,166,117, 0.6);
+      }
+      h3 {
+        width: 49%;
+        text-align: left;
+        display:inline-block;
+      }
+      .numberOf {
+        float: right;
+        text-align: right !important;
+      }
+      li:nth-child(odd) {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+      }
+      li:last-child {
+        border-bottom: 1px solid white;
+      }
+      p, h3 {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <canvas id="gameCanvas" width="600" height="480"></canvas>
-    <ul>
-      <li class="available">
-        <p>Potato</p>
-      </li>
-      <li>
-        <p>GLADoS</p>
-      </li>
-    </ul>
+    <div>
+      <ul id="itemList">
+        <li id="purchasePotato" class="available">
+          <h3>Potato</h3><h3 class="numberOf">1</h3>
+          <p class="price">Price: 1.00</p>
+          <p class="generate">Generates: 0.1</p>
+        </li>
+        <li id="purchaseLemon" class="available">
+          <h3>Lemon</h3><h3 class="numberOf">0</h3>
+          <p class="price">Price: 4.00</p>
+          <p class="generate">Generates: 1</p>
+        </li>
+        <li id="2" class="available" onclick="purchase">
+          <h3>Moon Rocks</h3><h3 class="numberOf">0</h3>
+          <p class="price">Price: 100.00</p>
+          <p class="generate">Generates: 4</p>
+        </li>
+        <li id="3" onclick="buyItem">
+          <h3>GLADoS</h3><h3 class="numberOf">0</h3>
+          <p class="price">Price: 1000000000.00</p>
+          <p class="generate">Generates: 100</p>
+        </li>
+      </ul>
+    </div>
     <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
