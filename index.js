@@ -112,6 +112,7 @@ game.init();
 // Update UI
 setInterval(function() {
   document.getElementsByClassName('moneyCount')[0].innerHTML = player.coins;
+  document.getElementsByClassName('generateAmount')[0].innerHTML = player.generatePerTick;
   document.getElementById('potatoNumb').innerHTML = player.items[0].amount;
   document.getElementById('lemonNumb').innerHTML = player.items[1].amount;
 }, 100);
