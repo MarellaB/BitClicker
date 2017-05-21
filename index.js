@@ -109,10 +109,17 @@ const game = {
 
 game.init();
 
+// Generate
+setInterval(function() {
+  player.coins += player.generatePerTick;
+}, 1000)
+
 // Update UI
 setInterval(function() {
   document.getElementsByClassName('moneyCount')[0].innerHTML = player.coins;
   document.getElementsByClassName('generateAmount')[0].innerHTML = player.generatePerTick;
   document.getElementById('potatoNumb').innerHTML = player.items[0].amount;
   document.getElementById('lemonNumb').innerHTML = player.items[1].amount;
+  document.getElementById('compStickNumb').innerHTML = player.items[2].amount;
+  document.getElementById('dualCoreNumb').innerHTML = player.items[3].amount;
 }, 100);
